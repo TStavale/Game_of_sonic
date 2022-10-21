@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.ladybug {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    right: -70px;
+    animation: ladybug-animation 2s infinite linear;
+}
+
+@keyframes ladybug-animation {
+    from {
+        right: 0;
+    }
+    to {
+       right: 100%; 
+    }
+
+}
