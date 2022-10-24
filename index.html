@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,25 @@
         <title>Game Sonic</title>
     </head>
     <body>
-        <main class="game-board">
-            <img src="./assets/img/ladybug.png" class="ladybug">
-            
-        </main>   
+        <section id="Container"> 
+            <div class="game-board"> <!--Box do jogo-->
+                <div class="ladybug">
+                    <img src="./assets/img/ladybug.png" class="img-ladybug">
+                </div>
+                <div class="crab">
+                    <img src="./assets/img/crab.png" alt="crab" class="img-crab">
+                </div>
+            </div>
+        </section>
+
+        <section> <!--sons do jogo-->
+            <audio src="./assets/sounds/song_sonic.mp3" preload="auto" id="song_game"></audio>
+        </section> 
     </body>
+
+
+
+    <script src="./assets/js/jquery-1.11.1.min.js"></script>
     <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/jquery-collision.min.js"></script>
 </html>
