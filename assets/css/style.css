@@ -21,6 +21,16 @@
     background: url("/assets/img/background_sonic.png");
 }
 
+.sonic {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+}
+
+.img-sonic {
+    width: 90px;
+}
+
 .ladybug {
     position: absolute;
     bottom: 50px;
