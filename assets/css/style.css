@@ -1,71 +1,215 @@
-@font-face {
-	font-family:Titulo;
-	src:url(fontes/ANODETONOONE.TTF);
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-.game-board {
-    width: 65%;
-    height: 600px;
-    border: 1px solid #333;
-    margin: auto;
-    margin-top: 60px;
-    position: relative;
-    overflow: hidden;
-    background: url("/assets/img/background_sonic.png");
+h1 {
+	font-family:Titulo;
+	font-size:40px;
+	color:#603A03;
 }
 
-.sonic {
+body {
+	background-color: blue;
+}
+
+#container{
+	width:950px;
+	height:auto;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#Game {
+	width:950px;
+	height:610px;
+	background-image:url(../img/background_sonic.png);
+	border-color:#FFF;
+	border-style:solid;
+}
+
+#Sonic {
     position: absolute;
-    bottom: 50px;
-    left: 40px;
-}
-
-.img-sonic {
+    bottom: 0;
     width: 90px;
+    right: 0;
+    background-image: url(../img/sonic-the-hegdehog-sonic.gif);
+    animation: 500ms ease-out;
 }
 
-.ladybug {
+
+
+#ladybug {
     position: absolute;
     bottom: 50px;
     right: -70px;
-    animation: ladybug-animation 4s infinite linear;
+    background-image: url(../img/ladybug.png);
 }
 
-.img-ladybug, .img-crab {
-    width: 100px;
-}
-
-.crab {
+#crab {
     position: absolute;
     bottom: 50px;
     width: 95px;
     right: -90px;
-    animation: crab-animation 6s infinite linear;
+    background-image: url(../img/crab.png);
 }
 
-@keyframes ladybug-animation {
-    from {
-        right: -90;
+#inicio {
+	width:350px;
+	height:200px;
+	background-color:#FFF;
+ 	margin-left:auto;
+        margin-right:auto;
+ 	margin-top:100px;
+	text-align:center;
+	padding:10px;
+
+}
+.personagem1 {
+	background-image:url(../img/sonic-the-hegdehog-sonic.gif);
+	animation: play .5s steps(2) infinite;
+
+       -webkit-animation: play .5s steps(2) infinite;
+       -moz-animation: play .5s steps(2) infinite;
+       -ms-animation: play .5s steps(2) infinite;
+       -o-animation: play .5s steps(2) infinite;
+}
+
+@-webkit-keyframes play {
+    from { background-position:0px; }
+      to { background-position: 100%; }
+ }
+ 
+ @-moz-keyframes play {
+    from { background-position:0px; }
+      to { background-position: 100%; }
+ }
+ 
+ @-ms-keyframes play {
+    from { background-position:0px; }
+      to { background-position: 100%; }
+ }
+ 
+ @-o-keyframes play {
+    from { background-position:0px; }
+      to { background-position: 100%; }
+ }
+
+ .personagem2 {
+    background-image:url(../img/ladybug.png);
+    animation: play .5s steps(2) infinite;
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite; 
+}
+
+@-webkit-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+ 
+ @-moz-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+ 
+ @-ms-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+ 
+ @-o-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+
+ .personagem3 {
+    background-image:url(../img/crab.png);
+    animation: play .5s steps(2) infinite;
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite; 
+}
+
+@-webkit-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+ 
+ @-moz-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+ 
+ @-ms-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+ 
+ @-o-keyframes play2 {
+    from { background-position:    0px; }
+      to { background-position: -528px; }
+ }
+
+@keyframes jump-animation {
+    0% {
+        bottom: 0;
     }
-    to {
-       right: 100%; 
+    40% {
+        bottom: 180px;
+    }
+    50% {
+       bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
     }
 
 }
 
-@keyframes crab-animation {
-    from {
-        right: -90;
-    }
-    to {
-       right: 100%; 
-    }
+#placar {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	left: 20px;
+	top: 580px;
+}
 
+h2 {
+	font-family:Titulo;
+	font-size:20px;
+	color:#FFF
+}
+
+#vida {
+	width: 140px;
+	height: 38px;
+	position: absolute;
+	left: 750px;
+	top: 7px;	
+}
+
+h3 {
+	font-family:Titulo;
+	font-size:20px;
+	color:#603A03;
+
+}
+
+#fim {
+	width:350px;
+	height:200px;
+	background-color:#FFF;
+ 	margin-left:auto;
+    	margin-right:auto;
+ 	margin-top:100px;
+	text-align:center;
+	padding:10px;
 }

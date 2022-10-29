@@ -8,28 +8,33 @@
         <title>Game Sonic</title>
     </head>
     <body>
-        <section id="Container"> 
-            <div class="game-board"> <!--Box do jogo-->
-                <div class="ladybug">
-                    <img src="./assets/img/ladybug.png" class="img-ladybug">
-                </div>
-                <div class="crab">
-                    <img src="./assets/img/crab.png" alt="crab" class="img-crab">
-                </div>
-                <div class="sonic">
-                    <img src="./assets/img/sonic-the-hegdehog-sonic.gif" alt="Sonic" class="img-sonic">
-                </div>
-            </div>
+
+        <section id="container"> <!-- div container !-->
+
+            <div id="Game"> <!-- div fundoGame !-->
+            
+                <div id="inicio" onclick="start()"><h1> Jogo do Sonic </h1> <!-- div inicio !-->
+                <p>Utilize 'espaço' para pular</p>
+                <p> Clique aqui para iniciar!! </p>
+                </div> <!-- Fim da div inicio !-->
+
+            </div> <!-- Fim da div fundoGame !-->
+	
+        </div> <!-- Fim da div container !-->
+ 
+            <audio src="./assets/sounds/song_sonic.mp3" preload="auto" id="musica"></audio>
+            <audio src="" preload="auto" id="jump"></audio>
+            <audio src="" preload="auto" id="bateu"></audio>
+            <audio src="" preload="auto" id="Gameover"></audio>
+
         </section>
-
-        <section> <!--sons do jogo-->
-            <audio src="./assets/sounds/song_sonic.mp3" preload="auto" id="song_game"></audio>
-        </section> 
-    </body>
-
-
 
     <script src="./assets/js/jquery-1.11.1.min.js"></script>
     <script src="./assets/js/script.js" defer></script>
     <script src="./assets/js/jquery-collision.min.js"></script>
+
+    </body>
+<footer>
+    Desenvolvido por Ana Caroline Vasconcellos e Tassio Stavale
+</footer>
 </html>
