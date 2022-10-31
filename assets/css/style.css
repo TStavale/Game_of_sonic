@@ -204,17 +204,23 @@ body {
 }
 
 #placar {
-	width: 450px;
-	height: 50px;
+	width: 18rem;
+	height: 3rem;
+  background-color: rgba(189, 116, 21, 0.384);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 	position: absolute;
-	left: 20px;
-	top: 580px;
+	left: 32rem;
+	top: 2rem;
+  z-index: 1000;
 }
 
 h2 {
 	font-family:Titulo;
 	font-size:20px;
-	color:#FFF
+	color:rgb(52, 252, 13)
 }
 
 #vida {
