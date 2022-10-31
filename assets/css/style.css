@@ -23,11 +23,47 @@ body {
 }
 
 #Game {
-	width:950px;
-	height:610px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width:53rem;
+	height:33rem;
 	background-image:url(../img/background_sonic.png);
 	border-color:#FFF;
 	border-style:solid;
+}
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+	width:20rem;
+	height:13rem;
+}
+
+.img-inicio {
+  width: 25rem;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+
+.tutorial {
+  position: absolute;
+  top: 21rem;
+  left: 21rem;
+  
+  
+}
+
+.text-tutorial {
+  margin: 0.3rem;
+  padding: 0.3rem;
+  color: #FFF;
+  font-weight: bold;
+  background-color:rgba(104, 102, 231, 0.986);
+	text-align:center;
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgb(255, 255, 255);
 }
 
 #Sonic {
@@ -56,17 +92,6 @@ body {
     background-image: url(../img/crab.png);
 }
 
-#inicio {
-	width:350px;
-	height:200px;
-	background-color:#FFF;
- 	margin-left:auto;
-        margin-right:auto;
- 	margin-top:100px;
-	text-align:center;
-	padding:10px;
-
-}
 .personagem1 {
 	background-image:url(../img/sonic-the-hegdehog-sonic.gif);
 	animation: play .5s steps(2) infinite;
@@ -212,4 +237,12 @@ h3 {
  	margin-top:100px;
 	text-align:center;
 	padding:10px;
+}
+
+.text-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
 }
