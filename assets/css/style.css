@@ -36,23 +36,27 @@ body {
 #inicio {
   display: flex;
   flex-direction: column;
-	width:20rem;
+	width:0rem;
 	height:13rem;
 }
 
 .img-inicio {
-  width: 25rem;
+  width: 52.5rem;
   position: absolute;
-  top: 20%;
-  left: 25%;
+  top: 0.3rem;
+  left: 0.2rem;
 }
 
 .tutorial {
   position: absolute;
-  top: 21rem;
-  left: 21rem;
+  top: 25rem;
+  left: 19rem;
   
   
+}
+
+.tutorial:hover {
+  cursor: pointer;
 }
 
 .text-tutorial {
