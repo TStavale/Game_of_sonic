@@ -98,7 +98,7 @@ body {
   position: absolute;
   bottom: 1.2rem;
   width: 7rem;
-  right: -7rem;
+  right: -120px;
   animation: crab-animation 5s infinite linear;
 }
 
@@ -149,27 +149,7 @@ body {
   }
 }
 
-/*@-webkit-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
- 
- @-moz-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
- 
- @-ms-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
- 
- @-o-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
-
-  ladybug
+/*   ladybug
 
 @-webkit-keyframes play2 {
     from { background-position:    0px; }
@@ -219,26 +199,8 @@ body {
     from { background-position:    0px; }
       to { background-position: -528px; }
  }
-
-@keyframes jump-animation {
-    0% {
-        bottom: 0;
-    }
-    40% {
-        bottom: 180px;
-    }
-    50% {
-       bottom: 180px;
-    }
-    60%{
-        bottom: 180px;
-    }
-    100% {
-        bottom: 0;
-    }
-
-}
 */
+
 #placar {
 	width: 12rem;
 	height: 6rem;

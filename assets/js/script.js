@@ -1,8 +1,49 @@
 function start() { // Inicio da função start()
 
+    $("#inicio").hide();
+
+    var jogo = {};
+
+    jogo.timer = setInterval(loop,30);
+	
+	function loop() {
+	
+        movefundo();
+        crabcollision()
+        energia();
+
+    
+	
+	} // Fim da função loop()
+
+    function movefundo() {
+	
+        esquerda = parseInt($("#Game").css("background-position"));
+        $("#Game").css("background-position",esquerda-1);
+        
+    } // fim da função movefundo()
+    
+    function crabcollision() {
+        const crabPosition = crab.offsetleft;
+        
+        if (crabcollision <= 120) {
+
+            crab.style.animation = 'none';
+
+        }
+    }
+
+
+    //Música em loop
+    var musica=document.getElementById("musica");
+
+    musica.addEventListener("ended", function(){ musica.currentTime = 0; musica.play(); }, false);
+    musica.play();
+
     // Animação do pulo do sonic
     
     const sonic = document.querySelector('#sonic');
+    const crab = document.querySelector('#crab');
 
     const jump = () => {
         sonic.classList.add('jump');
@@ -16,12 +57,15 @@ function start() { // Inicio da função start()
 
 
 
-
+    /*const loop = setInterval(() => {
+        const crabPosition = crab.offsetleft;
+        console.log()
+    }, 10);*/
 
     // DAQUI PARA BAIXO EU NÃO EDITEI NADA, APENAS APAGUEI ALGUMAS COISAS QUE ESTAVAM INTERFERINDO.
 
-	$("#inicio").hide();
 	
+	/*
 	$("#Game").append("<div id='ladybug' class='personagem2'></div>");
     $("#Game").append("<div id='placar'></div>");
     $("#Game").append("<div id='energia'></div>");
@@ -33,24 +77,22 @@ function start() { // Inicio da função start()
     var pontos=0;
     var salvos=0;
     var perdidos=0;
-    var energiaAtual=3;
-	var jogo = {};
-    var velocidade=5;
-    var posicaoY = parseInt(Math.random() * 334);
+    var energiaAtual=3;*/
+	
+    //var velocidade=5;
+    //var posicaoY = parseInt(Math.random() * 334);
     
-        jogo.pressionou = [];
+        //jogo.pressionou = [];
 
-        var somExplosao=document.getElementById("bateu");
-        var musica=document.getElementById("musica");
-        var somGameover=document.getElementById("Gameover");
+        //var somExplosao=document.getElementById("bateu");
+        
+        //var somGameover=document.getElementById("Gameover");
       
-    //Música em loop
-    musica.addEventListener("ended", function(){ musica.currentTime = 0; musica.play(); }, false);
-    musica.play();
+    
 
         //Verifica se o usuário pressionou alguma tecla	
 	
-	$(document).keydown(function(e){
+	/*$(document).keydown(function(e){
         jogo.pressionou[e.which] = true;
         });
     
@@ -67,23 +109,19 @@ function start() { // Inicio da função start()
 	function loop() {
 	
         movefundo();
-        movering();
-        colisao();
-        placar();
+        crabcollision()
+        //movering();
+        //colisao();
+        //placar();
         energia();
 
     
 	
-	} // Fim da função loop()
+	} // Fim da função loop()*/
 
     //Função que movimenta o fundo do jogo*/ 
 	
-	function movefundo() {
 	
-        esquerda = parseInt($("#Game").css("background-position"));
-        $("#Game").css("background-position",esquerda-1);
-        
-    } // fim da função movefundo()
 
       /* function movering() {
 
