@@ -1,5 +1,7 @@
 function start() { // Inicio da função start()
 
+    // Animação do pulo do sonic
+    
     const sonic = document.querySelector('#sonic');
 
     const jump = () => {
