@@ -96,9 +96,8 @@ body {
 
 #crab {
   position: absolute;
-  bottom: 1.2rem;
-  width: 7rem;
-  right: -120px;
+  bottom: 15px;
+  width: 100px;  
   animation: crab-animation 5s infinite linear;
 }
 
@@ -118,7 +117,7 @@ body {
 
 @keyframes crab-animation {
   from {
-    right: -70;
+    right: -100px;
   }
 
   to {

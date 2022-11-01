@@ -9,8 +9,8 @@ function start() { // Inicio da função start()
 	function loop() {
 	
         movefundo();
-        crabcollision()
-        energia();
+        crabCollision()
+        //energia();
 
     
 	
@@ -23,12 +23,16 @@ function start() { // Inicio da função start()
         
     } // fim da função movefundo()
     
-    function crabcollision() {
-        const crabPosition = crab.offsetleft;
+
+    // Colisão com o crab
+
+    function crabCollision() {
+        const crabPosition = crab.offsetLeft;
         
-        if (crabcollision <= 120) {
+        if (crabPosition <= 120) {
 
             crab.style.animation = 'none';
+            crab.style.left = `${crabPosition}px`;
 
         }
     }
@@ -249,7 +253,7 @@ function start() { // Inicio da função start()
     } //fim da função placar()
 
     //Barra de energia
-*/
+
 function energia() {
 	
     if (energiaAtual==3) {
@@ -276,7 +280,7 @@ function energia() {
     }
 
 } // Fim da função energia()
-
+*/
 //Função GAME OVER
 function gameOver() {
 	fimdejogo=true;
