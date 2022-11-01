@@ -11,7 +11,7 @@
 
         <section id="container"> <!-- div container !-->
 
-            <div id="Game"> <!-- div fundoGame !-->
+            <div id="Game">
             
                 <div id="inicio" onclick="start()">
                     <img class="img-inicio" src="./assets/img/destaque_sonic.gif" alt="Game_Sonic" >
@@ -19,11 +19,40 @@
                         <p class="text-tutorial">Utilize 'espaço' para pular</p>
                         <p class="text-tutorial"> Clique aqui para iniciar!! </p>
                     </div>
-                </div> <!-- Fim da div inicio !-->
+                </div>
+                <div>
+                    <img id="sonic" src="./assets/img/sonic.gif" alt="sonic">
+                </div>
+                <div>
+                    <img id="butterdroid" src="./assets/img/butterdroid.gif" alt="butterdroid">
+                </div>
+                <div>
+                    <img id="crab" src="./assets/img/crab.gif" alt="crab">
+                </div>
+                <div>
+                    <!--<img id="ring" src="./assets/img/ring.gif" alt="ring">-->
+                </div>
+                <div>
+                    <table>
+                        <table id="placar" border="0">
+                            <tbody>
+                              <tr>
+                                <td class="td-color">LIFE</td>
+                                <td class="td-color2">3</td>
+                              </tr>
+                              <tr>
+                                <td class="td-color">TIME</td>
+                                <td class="td-color2">00:00</td>
+                              </tr>
+                              <tr>
+                                <td class="td-color">RINGS</td>
+                                <td class="td-color2">0</td>
+                              </tr>
+                    </table>
+                </div>
 
-            </div> <!-- Fim da div fundoGame !-->
+            </div>
 	
-        </div> <!-- Fim da div container !-->
  
             <audio src="./assets/sounds/song_sonic.mp3" preload="auto" id="musica"></audio>
             <audio src="./assets/sounds/Sonic_Jump.mp3" preload="auto" id="jump"></audio>
@@ -34,7 +63,6 @@
 
     <script src="./assets/js/jquery-1.11.1.min.js"></script>
     <script src="./assets/js/script.js" defer></script>
-    <script src="./assets/js/jquery-collision.min.js"></script>
 
     </body>
 <footer class="footer">

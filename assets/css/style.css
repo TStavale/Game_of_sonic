@@ -20,6 +20,7 @@ body {
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
+  
 }
 
 #Game {
@@ -31,6 +32,8 @@ body {
 	background-image:url(../img/background_sonic.png);
 	border-color:#FFF;
 	border-style:solid;
+  position: relative;
+  overflow: hidden;
 }
 
 #inicio {
@@ -45,13 +48,14 @@ body {
   position: absolute;
   top: 0.3rem;
   left: 0.2rem;
+  z-index: 100;
 }
 
 .tutorial {
   position: absolute;
   top: 25rem;
   left: 19rem;
-  
+  z-index: 110;
   
 }
 
@@ -70,43 +74,82 @@ body {
   border: 0.2rem solid rgb(255, 255, 255);
 }
 
-#Sonic {
-    position: absolute;
-    bottom: 0;
-    width: 90px;
-    right: 0;
-    background-image: url(../img/sonic-the-hegdehog-sonic.gif);
-    animation: 500ms ease-out;
+#sonic {
+  width: 7rem;
+  bottom: 1rem;
+  right: 42rem;
+  position: absolute;
+
 }
 
+.jump {
+  animation: jump-animation 500ms ease-out;
+}
 
-
-#ladybug {
-    position: absolute;
-    bottom: 50px;
-    right: -70px;
-    background-image: url(../img/ladybug.png);
+#butterdroid {
+  position: absolute;
+  width: 6.2rem;
+  bottom: 15rem;
+  right: -5.8rem;
+  animation: butterdroid-animation 3s infinite linear;
 }
 
 #crab {
-    position: absolute;
-    bottom: 50px;
-    width: 95px;
-    right: -90px;
-    background-image: url(../img/crab.png);
+  position: absolute;
+  bottom: 1.2rem;
+  width: 7rem;
+  right: -7rem;
+  animation: crab-animation 5s infinite linear;
 }
 
-.personagem1 {
-	background-image:url(../img/sonic-the-hegdehog-sonic.gif);
-	animation: play .5s steps(2) infinite;
-
-       -webkit-animation: play .5s steps(2) infinite;
-       -moz-animation: play .5s steps(2) infinite;
-       -ms-animation: play .5s steps(2) infinite;
-       -o-animation: play .5s steps(2) infinite;
+#ring {
+  width: 3rem;
 }
 
-@-webkit-keyframes play {
+@keyframes butterdroid-animation {
+  from {
+    right: -70;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes crab-animation {
+  from {
+    right: -70;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump-animation {
+  
+  0% {
+    bottom: 1rem;
+  }
+
+  40% {
+    bottom: 22rem;
+  }
+
+  50% {
+    bottom: 22rem;
+  }
+
+  60% {
+    bottom: 22rem;
+  }
+
+  100% {
+    bottom: 1rem;
+  }
+}
+
+/*@-webkit-keyframes play {
     from { background-position:0px; }
       to { background-position: 100%; }
  }
@@ -126,14 +169,7 @@ body {
       to { background-position: 100%; }
  }
 
- .personagem2 {
-    background-image:url(../img/ladybug.png);
-    animation: play .5s steps(2) infinite;
-    -webkit-animation: play .5s steps(2) infinite;
-    -moz-animation: play .5s steps(2) infinite;
-    -ms-animation: play .5s steps(2) infinite;
-    -o-animation: play .5s steps(2) infinite; 
-}
+  ladybug
 
 @-webkit-keyframes play2 {
     from { background-position:    0px; }
@@ -202,51 +238,34 @@ body {
     }
 
 }
-
+*/
 #placar {
-	width: 18rem;
-	height: 3rem;
-  background-color: rgba(189, 116, 21, 0.384);
+	width: 12rem;
+	height: 6rem;
+  background-color: rgba(89, 150, 219, 0.089);
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 	position: absolute;
-	left: 32rem;
-	top: 2rem;
-  z-index: 1000;
+	left: 38rem;
+	top: 1rem;
+  z-index: 90;
 }
 
-h2 {
-	font-family:Titulo;
-	font-size:20px;
-	color:rgb(52, 252, 13)
+.td-color {
+  color: #f7cd12;
+  font-size: 1.5rem;
+  font-family: helvetica, sans-serif;
+  font-weight: bolder;
 }
 
-#vida {
-	width: 140px;
-	height: 38px;
-	position: absolute;
-	left: 750px;
-	top: 7px;	
-}
-
-h3 {
-	font-family:Titulo;
-	font-size:20px;
-	color:#603A03;
-
-}
-
-#fim {
-	width:350px;
-	height:200px;
-	background-color:#FFF;
- 	margin-left:auto;
-    	margin-right:auto;
- 	margin-top:100px;
-	text-align:center;
-	padding:10px;
+.td-color2 {
+  color: #FFF;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  font-family: helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 .text-footer {

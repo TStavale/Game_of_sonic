@@ -1,10 +1,26 @@
 function start() { // Inicio da função start()
 
+    const sonic = document.querySelector('#sonic');
+
+    const jump = () => {
+        sonic.classList.add('jump');
+        setTimeout(() => {
+            sonic.classList.remove('jump');
+
+        }, 500);
+    }
+
+    document.addEventListener('keydown' , jump);
+
+
+
+
+
+    // DAQUI PARA BAIXO EU NÃO EDITEI NADA, APENAS APAGUEI ALGUMAS COISAS QUE ESTAVAM INTERFERINDO.
+
 	$("#inicio").hide();
 	
-	$("#Game").append("<div id='Sonic' class='personagem1'></div>");
 	$("#Game").append("<div id='ladybug' class='personagem2'></div>");
-	$("#Game").append("<div id='crab' class='personagem3'></div>");
     $("#Game").append("<div id='placar'></div>");
     $("#Game").append("<div id='energia'></div>");
 
@@ -22,7 +38,6 @@ function start() { // Inicio da função start()
     
         jogo.pressionou = [];
 
-        var jump=document.getElementById("jump");
         var somExplosao=document.getElementById("bateu");
         var musica=document.getElementById("musica");
         var somGameover=document.getElementById("Gameover");
@@ -49,26 +64,17 @@ function start() { // Inicio da função start()
 	
 	function loop() {
 	
-	movefundo();
-    moveSonic();
-    moveladybug();
-    movecrab();
-    colisao();
-    placar();
-    energia();
+        movefundo();
+        movering();
+        colisao();
+        placar();
+        energia();
 
-    function moveSonic() {
-	
-            document.getElementById("Sonic").style.cssText = 'transition: all 0.3s  ease-out;'; 
-            document.getElementById("Sonic").style.top = "-30px";
-            setTimeout(function(){document.getElementById("Sonic").style.top = "60px";},200);
-            
-
-        } // fim da função moveSonic()
+    
 	
 	} // Fim da função loop()
 
-    //Função que movimenta o fundo do jogo
+    //Função que movimenta o fundo do jogo*/ 
 	
 	function movefundo() {
 	
@@ -77,32 +83,20 @@ function start() { // Inicio da função start()
         
     } // fim da função movefundo()
 
-        function moveladybug() {
+      /* function movering() {
 
-            posicaoX = parseInt($("#ladybug").css("left"));
-            $("#ladybug").css("left",posicaoX-velocidade);
-            $("#ladybug").css("top",posicaoY);
+            posicaoX = parseInt($("#ring").css("left"));
+            $("#ring").css("left",posicaoX-velocidade);
+            $("#ring").css("top",posicaoY);
                 
                 if (posicaoX<=0) {
                 posicaoY = parseInt(Math.random() * 334);
-                $("#ladybug").css("left",694);
-                $("#ladybug").css("top",posicaoY);
+                $("#ring").css("left",694);
+                $("#ring").css("top",posicaoY);
                     
                 }
         } //Fim da função ladybug()
-
-        function movecrab() {
-
-            posicaoX = parseInt($("#crab").css("left"));
-            $("#crab").css("left",posicaoX-3);
-                    
-            if (posicaoX<=0) {
-                
-            $("#crab").css("left",775);
-                        
-            }
-    } // Fim da função moveinimigo2()
-
+    
         function colisao() {
         var colisao1 = ($("#Sonic").collision($("#ladybug")));
         var colisao2 = ($("#Sonic").collision($("#crab")));
@@ -215,7 +209,7 @@ function start() { // Inicio da função start()
     } //fim da função placar()
 
     //Barra de energia
-
+*/
 function energia() {
 	
     if (energiaAtual==3) {
