@@ -28,11 +28,24 @@ function start() { // Inicio da função start()
 
     function crabCollision() {
         const crabPosition = crab.offsetLeft;
+        const sonicPosition = +window.getComputedStyle(sonic).bottom.replace('px' , '')  
+        /*Utilizei o getComputedStyle, para poder pegar o steyle bottom, usei o replace para retirar o 'px' e o '+' na frente do
+        window para converter a string em number*/
         
-        if (crabPosition <= 120) {
+
+
+        if (crabPosition <= 120 && crabPosition > 0 && sonicPosition < 85) {
 
             crab.style.animation = 'none';
             crab.style.left = `${crabPosition}px`;
+
+            sonic.style.animation = 'none';
+            sonic.style.bottom = `${sonicPosition}px`; // Fazendo o sonic parar na posição onde bateu no crab.
+
+            sonic.src = './assets/img/contato-sonic.png'; // quando o sonic bater no crab, a imagem troca.
+            sonic.style.width = '160px'; // alterando o tamanho da imagem de contato.
+
+            clearInterval(loop);
 
         }
     }

@@ -75,15 +75,15 @@ body {
 }
 
 #sonic {
-  width: 7rem;
-  bottom: 1rem;
-  right: 42rem;
+  width: 120px;
+  bottom: 20px;
+  left: 35px;
   position: absolute;
 
 }
 
 .jump {
-  animation: jump-animation 500ms ease-out;
+  animation: jump-animation 700ms ease-out;
 }
 
 #butterdroid {
@@ -91,19 +91,19 @@ body {
   width: 6.2rem;
   bottom: 15rem;
   right: -5.8rem;
-  animation: butterdroid-animation 3s infinite linear;
+  animation: butterdroid-animation 5s infinite linear;
 }
 
 #crab {
   position: absolute;
   bottom: 15px;
   width: 100px;  
-  animation: crab-animation 5s infinite linear;
+  animation: crab-animation 3s infinite linear;
 }
 
-#ring {
+/*#ring {
   width: 3rem;
-}
+}*/
 
 @keyframes butterdroid-animation {
   from {
@@ -128,77 +128,25 @@ body {
 @keyframes jump-animation {
   
   0% {
-    bottom: 1rem;
+    bottom: 20px;
   }
-
+  
   40% {
-    bottom: 22rem;
+    bottom: 250px;
   }
 
   50% {
-    bottom: 22rem;
+    bottom: 250px; 
   }
 
   60% {
-    bottom: 22rem;
+    bottom: 250px; 
   }
 
   100% {
-    bottom: 1rem;
+    bottom: 20px;
   }
 }
-
-/*   ladybug
-
-@-webkit-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-moz-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-ms-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-o-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
-
- .personagem3 {
-    background-image:url(../img/crab.png);
-    animation: play .5s steps(2) infinite;
-    -webkit-animation: play .5s steps(2) infinite;
-    -moz-animation: play .5s steps(2) infinite;
-    -ms-animation: play .5s steps(2) infinite;
-    -o-animation: play .5s steps(2) infinite; 
-}
-
-@-webkit-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-moz-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-ms-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-o-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
-*/
 
 #placar {
 	width: 12rem;
