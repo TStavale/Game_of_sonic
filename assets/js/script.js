@@ -1,10 +1,89 @@
 function start() { // Inicio da função start()
 
-	$("#inicio").hide();
+    $("#inicio").hide();
+
+    var jogo = {};
+
+    jogo.timer = setInterval(loop,30);
 	
-	$("#Game").append("<div id='Sonic' class='personagem1'></div>");
+	function loop() {
+	
+        movefundo();
+        crabCollision()
+        //energia();
+
+    
+	
+	} // Fim da função loop()
+
+    function movefundo() {
+	
+        esquerda = parseInt($("#Game").css("background-position"));
+        $("#Game").css("background-position",esquerda-1);
+        
+    } // fim da função movefundo()
+    
+
+    // Colisão com o crab
+
+    function crabCollision() {
+        const crabPosition = crab.offsetLeft;
+        const sonicPosition = +window.getComputedStyle(sonic).bottom.replace('px' , '')  
+        /*Utilizei o getComputedStyle, para poder pegar o steyle bottom, usei o replace para retirar o 'px' e o '+' na frente do
+        window para converter a string em number*/
+        
+
+
+        if (crabPosition <= 120 && crabPosition > 0 && sonicPosition < 85) {
+
+            crab.style.animation = 'none';
+            crab.style.left = `${crabPosition}px`;
+
+            sonic.style.animation = 'none';
+            sonic.style.bottom = `${sonicPosition}px`; // Fazendo o sonic parar na posição onde bateu no crab.
+
+            sonic.src = './assets/img/contato-sonic.png'; // quando o sonic bater no crab, a imagem troca.
+            sonic.style.width = '160px'; // alterando o tamanho da imagem de contato.
+
+            clearInterval(loop);
+
+        }
+    }
+
+
+    //Música em loop
+    var musica=document.getElementById("musica");
+
+    musica.addEventListener("ended", function(){ musica.currentTime = 0; musica.play(); }, false);
+    musica.play();
+
+    // Animação do pulo do sonic
+    
+    const sonic = document.querySelector('#sonic');
+    const crab = document.querySelector('#crab');
+
+    const jump = () => {
+        sonic.classList.add('jump');
+        setTimeout(() => {
+            sonic.classList.remove('jump');
+
+        }, 500);
+    }
+
+    document.addEventListener('keydown' , jump);
+
+
+
+    /*const loop = setInterval(() => {
+        const crabPosition = crab.offsetleft;
+        console.log()
+    }, 10);*/
+
+    // DAQUI PARA BAIXO EU NÃO EDITEI NADA, APENAS APAGUEI ALGUMAS COISAS QUE ESTAVAM INTERFERINDO.
+
+	
+	/*
 	$("#Game").append("<div id='ladybug' class='personagem2'></div>");
-	$("#Game").append("<div id='crab' class='personagem3'></div>");
     $("#Game").append("<div id='placar'></div>");
     $("#Game").append("<div id='energia'></div>");
 
@@ -15,25 +94,22 @@ function start() { // Inicio da função start()
     var pontos=0;
     var salvos=0;
     var perdidos=0;
-    var energiaAtual=3;
-	var jogo = {};
-    var velocidade=5;
-    var posicaoY = parseInt(Math.random() * 334);
+    var energiaAtual=3;*/
+	
+    //var velocidade=5;
+    //var posicaoY = parseInt(Math.random() * 334);
     
-        jogo.pressionou = [];
+        //jogo.pressionou = [];
 
-        var jump=document.getElementById("jump");
-        var somExplosao=document.getElementById("bateu");
-        var musica=document.getElementById("musica");
-        var somGameover=document.getElementById("Gameover");
+        //var somExplosao=document.getElementById("bateu");
+        
+        //var somGameover=document.getElementById("Gameover");
       
-    //Música em loop
-    musica.addEventListener("ended", function(){ musica.currentTime = 0; musica.play(); }, false);
-    musica.play();
+    
 
         //Verifica se o usuário pressionou alguma tecla	
 	
-	$(document).keydown(function(e){
+	/*$(document).keydown(function(e){
         jogo.pressionou[e.which] = true;
         });
     
@@ -49,60 +125,35 @@ function start() { // Inicio da função start()
 	
 	function loop() {
 	
-	movefundo();
-    moveSonic();
-    moveladybug();
-    movecrab();
-    colisao();
-    placar();
-    energia();
+        movefundo();
+        crabcollision()
+        //movering();
+        //colisao();
+        //placar();
+        energia();
 
-    function moveSonic() {
+    
 	
-            document.getElementById("Sonic").style.cssText = 'transition: all 0.3s  ease-out;'; 
-            document.getElementById("Sonic").style.top = "-30px";
-            setTimeout(function(){document.getElementById("Sonic").style.top = "60px";},200);
-            
+	} // Fim da função loop()*/
 
-        } // fim da função moveSonic()
+    //Função que movimenta o fundo do jogo*/ 
 	
-	} // Fim da função loop()
-
-    //Função que movimenta o fundo do jogo
 	
-	function movefundo() {
-	
-        esquerda = parseInt($("#Game").css("background-position"));
-        $("#Game").css("background-position",esquerda-1);
-        
-    } // fim da função movefundo()
 
-        function moveladybug() {
+      /* function movering() {
 
-            posicaoX = parseInt($("#ladybug").css("left"));
-            $("#ladybug").css("left",posicaoX-velocidade);
-            $("#ladybug").css("top",posicaoY);
+            posicaoX = parseInt($("#ring").css("left"));
+            $("#ring").css("left",posicaoX-velocidade);
+            $("#ring").css("top",posicaoY);
                 
                 if (posicaoX<=0) {
                 posicaoY = parseInt(Math.random() * 334);
-                $("#ladybug").css("left",694);
-                $("#ladybug").css("top",posicaoY);
+                $("#ring").css("left",694);
+                $("#ring").css("top",posicaoY);
                     
                 }
         } //Fim da função ladybug()
-
-        function movecrab() {
-
-            posicaoX = parseInt($("#crab").css("left"));
-            $("#crab").css("left",posicaoX-3);
-                    
-            if (posicaoX<=0) {
-                
-            $("#crab").css("left",775);
-                        
-            }
-    } // Fim da função moveinimigo2()
-
+    
         function colisao() {
         var colisao1 = ($("#Sonic").collision($("#ladybug")));
         var colisao2 = ($("#Sonic").collision($("#crab")));
@@ -242,7 +293,7 @@ function energia() {
     }
 
 } // Fim da função energia()
-
+*/
 //Função GAME OVER
 function gameOver() {
 	fimdejogo=true;

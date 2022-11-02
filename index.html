@@ -11,30 +11,61 @@
 
         <section id="container"> <!-- div container !-->
 
-            <div id="Game"> <!-- div fundoGame !-->
+            <div id="Game">
             
-                <div id="inicio" onclick="start()"><h1> Jogo do Sonic </h1> <!-- div inicio !-->
-                <p>Utilize 'espaço' para pular</p>
-                <p> Clique aqui para iniciar!! </p>
-                </div> <!-- Fim da div inicio !-->
+                <div id="inicio" onclick="start()">
+                    <img class="img-inicio" src="./assets/img/destaque_sonic.gif" alt="Game_Sonic" >
+                    <div class="tutorial">
+                        <p class="text-tutorial">Utilize 'espaço' para pular</p>
+                        <p class="text-tutorial"> Clique aqui para iniciar!! </p>
+                    </div>
+                </div>
+                <div>
+                    <img id="sonic" src="./assets/img/sonic.gif" alt="sonic">
+                </div>
+                <div>
+                    <img id="butterdroid" src="./assets/img/butterdroid.gif" alt="butterdroid">
+                </div>
+                <div>
+                    <img id="crab" src="./assets/img/crab.gif" alt="crab">
+                </div>
+                <div>
+                    <!--<img id="ring" src="./assets/img/ring.gif" alt="ring">-->
+                </div>
+                <div>
+                    <table>
+                        <table id="placar" border="0">
+                            <tbody>
+                              <tr>
+                                <td class="td-color">LIFE</td>
+                                <td class="td-color2">3</td>
+                              </tr>
+                              <tr>
+                                <td class="td-color">TIME</td>
+                                <td class="td-color2">00:00</td>
+                              </tr>
+                              <tr>
+                                <td class="td-color">RINGS</td>
+                                <td class="td-color2">0</td>
+                              </tr>
+                    </table>
+                </div>
 
-            </div> <!-- Fim da div fundoGame !-->
+            </div>
 	
-        </div> <!-- Fim da div container !-->
  
             <audio src="./assets/sounds/song_sonic.mp3" preload="auto" id="musica"></audio>
-            <audio src="" preload="auto" id="jump"></audio>
-            <audio src="" preload="auto" id="bateu"></audio>
+            <audio src="./assets/sounds/Sonic_Jump.mp3" preload="auto" id="jump"></audio>
+            <audio src="./assets/sounds/Sonic_damage.mp3" preload="auto" id="bateu"></audio>
             <audio src="" preload="auto" id="Gameover"></audio>
 
         </section>
 
     <script src="./assets/js/jquery-1.11.1.min.js"></script>
     <script src="./assets/js/script.js" defer></script>
-    <script src="./assets/js/jquery-collision.min.js"></script>
 
     </body>
-<footer>
-    Desenvolvido por Ana Caroline Vasconcellos e Tassio Stavale
+<footer class="footer">
+    <h3 class="text-footer">Desenvolvido por Ana Caroline Vasconcellos e Tassio Stavale</h3>
 </footer>
 </html>

@@ -20,196 +20,167 @@ body {
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
+  
 }
 
 #Game {
-	width:950px;
-	height:610px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width:53rem;
+	height:33rem;
 	background-image:url(../img/background_sonic.png);
 	border-color:#FFF;
 	border-style:solid;
-}
-
-#Sonic {
-    position: absolute;
-    bottom: 0;
-    width: 90px;
-    right: 0;
-    background-image: url(../img/sonic-the-hegdehog-sonic.gif);
-    animation: 500ms ease-out;
-}
-
-
-
-#ladybug {
-    position: absolute;
-    bottom: 50px;
-    right: -70px;
-    background-image: url(../img/ladybug.png);
-}
-
-#crab {
-    position: absolute;
-    bottom: 50px;
-    width: 95px;
-    right: -90px;
-    background-image: url(../img/crab.png);
+  position: relative;
+  overflow: hidden;
 }
 
 #inicio {
-	width:350px;
-	height:200px;
-	background-color:#FFF;
- 	margin-left:auto;
-        margin-right:auto;
- 	margin-top:100px;
+  display: flex;
+  flex-direction: column;
+	width:0rem;
+	height:13rem;
+}
+
+.img-inicio {
+  width: 52.5rem;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.2rem;
+  z-index: 100;
+}
+
+.tutorial {
+  position: absolute;
+  top: 25rem;
+  left: 19rem;
+  z-index: 110;
+  
+}
+
+.tutorial:hover {
+  cursor: pointer;
+}
+
+.text-tutorial {
+  margin: 0.3rem;
+  padding: 0.3rem;
+  color: #FFF;
+  font-weight: bold;
+  background-color:rgba(104, 102, 231, 0.986);
 	text-align:center;
-	padding:10px;
-
-}
-.personagem1 {
-	background-image:url(../img/sonic-the-hegdehog-sonic.gif);
-	animation: play .5s steps(2) infinite;
-
-       -webkit-animation: play .5s steps(2) infinite;
-       -moz-animation: play .5s steps(2) infinite;
-       -ms-animation: play .5s steps(2) infinite;
-       -o-animation: play .5s steps(2) infinite;
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgb(255, 255, 255);
 }
 
-@-webkit-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
- 
- @-moz-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
- 
- @-ms-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
- 
- @-o-keyframes play {
-    from { background-position:0px; }
-      to { background-position: 100%; }
- }
+#sonic {
+  width: 120px;
+  bottom: 20px;
+  left: 35px;
+  position: absolute;
 
- .personagem2 {
-    background-image:url(../img/ladybug.png);
-    animation: play .5s steps(2) infinite;
-    -webkit-animation: play .5s steps(2) infinite;
-    -moz-animation: play .5s steps(2) infinite;
-    -ms-animation: play .5s steps(2) infinite;
-    -o-animation: play .5s steps(2) infinite; 
 }
 
-@-webkit-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-moz-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-ms-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-o-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
-
- .personagem3 {
-    background-image:url(../img/crab.png);
-    animation: play .5s steps(2) infinite;
-    -webkit-animation: play .5s steps(2) infinite;
-    -moz-animation: play .5s steps(2) infinite;
-    -ms-animation: play .5s steps(2) infinite;
-    -o-animation: play .5s steps(2) infinite; 
+.jump {
+  animation: jump-animation 700ms ease-out;
 }
 
-@-webkit-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-moz-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-ms-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
- 
- @-o-keyframes play2 {
-    from { background-position:    0px; }
-      to { background-position: -528px; }
- }
+#butterdroid {
+  position: absolute;
+  width: 6.2rem;
+  bottom: 15rem;
+  right: -5.8rem;
+  animation: butterdroid-animation 5s infinite linear;
+}
+
+#crab {
+  position: absolute;
+  bottom: 15px;
+  width: 100px;  
+  animation: crab-animation 3s infinite linear;
+}
+
+/*#ring {
+  width: 3rem;
+}*/
+
+@keyframes butterdroid-animation {
+  from {
+    right: -70;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes crab-animation {
+  from {
+    right: -100px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
 
 @keyframes jump-animation {
-    0% {
-        bottom: 0;
-    }
-    40% {
-        bottom: 180px;
-    }
-    50% {
-       bottom: 180px;
-    }
-    60%{
-        bottom: 180px;
-    }
-    100% {
-        bottom: 0;
-    }
+  
+  0% {
+    bottom: 20px;
+  }
+  
+  40% {
+    bottom: 250px;
+  }
 
+  50% {
+    bottom: 250px; 
+  }
+
+  60% {
+    bottom: 250px; 
+  }
+
+  100% {
+    bottom: 20px;
+  }
 }
 
 #placar {
-	width: 450px;
-	height: 50px;
+	width: 12rem;
+	height: 6rem;
+  background-color: rgba(89, 150, 219, 0.089);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 	position: absolute;
-	left: 20px;
-	top: 580px;
+	left: 38rem;
+	top: 1rem;
+  z-index: 90;
 }
 
-h2 {
-	font-family:Titulo;
-	font-size:20px;
-	color:#FFF
+.td-color {
+  color: #f7cd12;
+  font-size: 1.5rem;
+  font-family: helvetica, sans-serif;
+  font-weight: bolder;
 }
 
-#vida {
-	width: 140px;
-	height: 38px;
-	position: absolute;
-	left: 750px;
-	top: 7px;	
+.td-color2 {
+  color: #FFF;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  font-family: helvetica, sans-serif;
+  font-weight: bolder;
 }
 
-h3 {
-	font-family:Titulo;
-	font-size:20px;
-	color:#603A03;
-
-}
-
-#fim {
-	width:350px;
-	height:200px;
-	background-color:#FFF;
- 	margin-left:auto;
-    	margin-right:auto;
- 	margin-top:100px;
-	text-align:center;
-	padding:10px;
+.text-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
 }
