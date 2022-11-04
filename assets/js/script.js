@@ -1,5 +1,9 @@
 function start() { // Inicio da função start()
 
+    const sonic = document.querySelector('#sonic');
+    const crab = document.querySelector('#crab');
+    const jump = document.getElementById('.jump')
+
     $("#inicio").hide();
 
     var jogo = {};
@@ -23,6 +27,33 @@ function start() { // Inicio da função start()
         
     } // fim da função movefundo()
     
+    
+
+    document.onkeydown = teclado;
+
+    function teclado(e) {
+        if (e.keyCode == 40) { //representa a tecla de seta para baixo.
+            
+            sonic.src = './assets/img/sonic-down.png';
+            sonic.style.width = '140px';
+
+            document.onkeyup = teclado = () => { // Faz o sonic voltar a posição de pé ao soltar a tecla de seta para baixo.
+                (e.keyCode == 40)
+                    sonic.src = './assets/img/sonic.gif';
+                    sonic.style.width = '120px';                
+       
+            }
+        }
+        else if (e.keyCode == 32) { //representa a tecla tab. 
+            
+            sonic.classList.add('jump');
+            setTimeout(() => {
+            sonic.classList.remove('jump');
+
+            }, 500);
+        }
+
+    }
 
     // Colisão com o crab
 
@@ -51,6 +82,9 @@ function start() { // Inicio da função start()
     }
 
 
+    
+
+
     //Música em loop
     var musica=document.getElementById("musica");
 
@@ -59,18 +93,17 @@ function start() { // Inicio da função start()
 
     // Animação do pulo do sonic
     
-    const sonic = document.querySelector('#sonic');
-    const crab = document.querySelector('#crab');
 
-    const jump = () => {
-        sonic.classList.add('jump');
+
+   /* = () => {
+         sonic.classList.add('jump');
         setTimeout(() => {
             sonic.classList.remove('jump');
 
         }, 500);
-    }
+    }*/
 
-    document.addEventListener('keydown' , jump);
+    //document.addEventListener('keydown' , jump);
 
 
 
