@@ -2,6 +2,7 @@ function start() { // Inicio da função start()
 
     const sonic = document.querySelector('#sonic');
     const crab = document.querySelector('#crab');
+    const butterdroid = document.querySelector('#butterdroid');
     const jump = document.getElementById('.jump')
 
     $("#inicio").hide();
@@ -14,6 +15,7 @@ function start() { // Inicio da função start()
 	
         movefundo();
         crabCollision()
+        butterdroidCollision()
         //energia();
 
     
@@ -28,6 +30,7 @@ function start() { // Inicio da função start()
     } // fim da função movefundo()
     
     
+    // // Animação do pulo do sonic e de Abaixar
 
     document.onkeydown = teclado;
 
@@ -36,11 +39,13 @@ function start() { // Inicio da função start()
             
             sonic.src = './assets/img/sonic-down.png';
             sonic.style.width = '140px';
+            sonic.style.height = '110px';
 
             document.onkeyup = teclado = () => { // Faz o sonic voltar a posição de pé ao soltar a tecla de seta para baixo.
                 (e.keyCode == 40)
                     sonic.src = './assets/img/sonic.gif';
-                    sonic.style.width = '120px';                
+                    sonic.style.width = '120px';
+                    sonic.style.height = '120px';                
        
             }
         }
@@ -60,7 +65,7 @@ function start() { // Inicio da função start()
     function crabCollision() {
         const crabPosition = crab.offsetLeft;
         const sonicPosition = +window.getComputedStyle(sonic).bottom.replace('px' , '')  
-        /*Utilizei o getComputedStyle, para poder pegar o steyle bottom, usei o replace para retirar o 'px' e o '+' na frente do
+        /*Utilizei o getComputedStyle, para poder pegar o style bottom, usei o replace para retirar o 'px' e o '+' na frente do
         window para converter a string em number*/
         
 
@@ -81,8 +86,30 @@ function start() { // Inicio da função start()
         }
     }
 
+    // Colisão com o butterdroid
 
-    
+    function butterdroidCollision() {
+        const butterdroidPosition = butterdroid.offsetLeft;
+        const sonicPosition = +window.getComputedStyle(sonic).height.replace('px' , '')
+        const sonicPositionUp = +window.getComputedStyle(sonic).bottom.replace('px' , '')  
+        /*Utilizei o getComputedStyle, para poder pegar o style height e o bottom, usei o replace para retirar o 'px' e o '+' na frente do
+        window para converter a string em number*/
+
+        if (butterdroidPosition <= 90 && butterdroidPosition > 0 && sonicPosition > 115 && sonicPositionUp < 170) {
+
+            butterdroid.style.animation = 'none';
+            butterdroid.style.left = `${butterdroidPosition}px`;
+
+            sonic.style.animation = 'none';
+            sonic.style.bottom = `${sonicPositionUp}px`; // Fazendo o sonic parar na posição onde bateu no butterdroid.
+
+            sonic.src = './assets/img/contato-sonic.png'; // quando o sonic bater no butterdroid, a imagem troca.
+            sonic.style.width = '160px'; // alterando o tamanho da imagem de contato.
+
+            clearInterval(loop);
+        }
+ 
+    }
 
 
     //Música em loop
@@ -91,30 +118,14 @@ function start() { // Inicio da função start()
     musica.addEventListener("ended", function(){ musica.currentTime = 0; musica.play(); }, false);
     musica.play();
 
-    // Animação do pulo do sonic
-    
-
-
-   /* = () => {
-         sonic.classList.add('jump');
-        setTimeout(() => {
-            sonic.classList.remove('jump');
-
-        }, 500);
-    }*/
-
-    //document.addEventListener('keydown' , jump);
-
-
-
-    /*const loop = setInterval(() => {
-        const crabPosition = crab.offsetleft;
-        console.log()
-    }, 10);*/
 
     // DAQUI PARA BAIXO EU NÃO EDITEI NADA, APENAS APAGUEI ALGUMAS COISAS QUE ESTAVAM INTERFERINDO.
 
 	
+
+
+
+
 	/*
 	$("#Game").append("<div id='ladybug' class='personagem2'></div>");
     $("#Game").append("<div id='placar'></div>");

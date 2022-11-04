@@ -76,6 +76,7 @@ body {
 
 #sonic {
   width: 120px;
+  height: 120px;
   bottom: 20px;
   left: 35px;
   position: absolute;
@@ -88,17 +89,16 @@ body {
 
 #butterdroid {
   position: absolute;
-  width: 6.2rem;
-  bottom: 15rem;
-  right: -5.8rem;
-  animation: butterdroid-animation 5s infinite linear;
+  width: 100px;
+  bottom: 100px;
+  animation: butterdroid-animation 8s infinite linear;
 }
 
 #crab {
   position: absolute;
   bottom: 15px;
   width: 100px;  
-  animation: crab-animation 3s infinite linear;
+  animation: crab-animation 4s infinite linear;
 }
 
 /*#ring {
@@ -107,7 +107,7 @@ body {
 
 @keyframes butterdroid-animation {
   from {
-    right: -70;
+    right: -100px;
   }
 
   to {
