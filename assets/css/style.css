@@ -18,8 +18,7 @@ body {
 	width:950px;
 	height:auto;
 	position:relative;
-	margin-left:auto;
-	margin-right:auto;
+  margin: 90px auto 0 auto;
   
 }
 
@@ -27,10 +26,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-	width:53rem;
-	height:33rem;
+	width:848px;
+	height:528px;
 	background-image:url(../img/background_sonic.png);
-	border-color:#FFF;
+	border-color:rgb(255, 255, 255);
 	border-style:solid;
   position: relative;
   overflow: hidden;
@@ -39,22 +38,22 @@ body {
 #inicio {
   display: flex;
   flex-direction: column;
-	width:0rem;
-	height:13rem;
+	width:0;
+	height:208px;
 }
 
 .img-inicio {
-  width: 52.5rem;
+  width: 840px;
   position: absolute;
-  top: 0.3rem;
-  left: 0.2rem;
+  top: 5px;
+  left: 3.5px;
   z-index: 100;
 }
 
 .tutorial {
   position: absolute;
-  top: 25rem;
-  left: 19rem;
+  top: 400px;
+  left: 240px;
   z-index: 110;
   
 }
@@ -64,14 +63,14 @@ body {
 }
 
 .text-tutorial {
-  margin: 0.3rem;
-  padding: 0.3rem;
+  margin: 10px;
+  padding: 5px;
   color: #FFF;
   font-weight: bold;
   background-color:rgba(104, 102, 231, 0.986);
 	text-align:center;
-  border-radius: 0.5rem;
-  border: 0.2rem solid rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 3px solid rgb(255, 255, 255);
 }
 
 #sonic {
@@ -84,14 +83,14 @@ body {
 }
 
 .jump {
-  animation: jump-animation 700ms ease-out;
+  animation: jump-animation 1.1s linear;
 }
 
 #butterdroid {
   position: absolute;
   width: 100px;
   bottom: 100px;
-  animation: butterdroid-animation 8s infinite linear;
+  animation: butterdroid-animation 10s infinite linear;
 }
 
 #crab {
@@ -100,10 +99,6 @@ body {
   width: 100px;  
   animation: crab-animation 4s infinite linear;
 }
-
-/*#ring {
-  width: 3rem;
-}*/
 
 @keyframes butterdroid-animation {
   from {
@@ -128,53 +123,36 @@ body {
 @keyframes jump-animation {
   
   0% {
-    bottom: 20px;
+    bottom: 0px;
   }
-  
-  40% {
-    bottom: 250px;
+  30% {
+    bottom: 150px;
   }
-
   50% {
-    bottom: 250px; 
+    bottom: 200px; 
   }
-
-  60% {
-    bottom: 250px; 
+  80% {
+    bottom: 150px;
   }
-
   100% {
-    bottom: 20px;
+    bottom: 0px;
   }
 }
+.placar {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+}
 
-#placar {
-	width: 12rem;
-	height: 6rem;
-  background-color: rgba(89, 150, 219, 0.089);
-  border-radius: 0.5rem;
+.container-score{
   display: flex;
   justify-content: center;
-  align-items: center;
-	position: absolute;
-	left: 38rem;
-	top: 1rem;
-  z-index: 90;
+  
 }
 
-.td-color {
-  color: #f7cd12;
-  font-size: 1.5rem;
-  font-family: helvetica, sans-serif;
-  font-weight: bolder;
-}
-
-.td-color2 {
-  color: #FFF;
-  font-size: 1.5rem;
-  padding-left: 1rem;
-  font-family: helvetica, sans-serif;
-  font-weight: bolder;
+.score {
+  color: #ffff;
+  font-size: 35px;
 }
 
 .text-footer {
