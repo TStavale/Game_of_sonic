@@ -16,7 +16,7 @@
                 <div id="inicio" onclick="start()">
                     <img class="img-inicio" src="./assets/img/destaque_sonic.gif" alt="Game_Sonic" >
                     <div class="tutorial">
-                        <p class="text-tutorial">Utilize 'espaço' para pular</p>
+                        <p class="text-tutorial">Utilize 'espaço' para pular e ↓ para abaixar</p>
                         <p class="text-tutorial"> Clique aqui para iniciar!! </p>
                     </div>
                 </div>
@@ -29,35 +29,21 @@
                 <div>
                     <img id="crab" src="./assets/img/crab.gif" alt="crab">
                 </div>
-                <div>
-                    <!--<img id="ring" src="./assets/img/ring.gif" alt="ring">-->
-                </div>
-                <div>
-                    <table>
-                        <table id="placar" border="0">
-                            <tbody>
-                              <tr>
-                                <td class="td-color">LIFE</td>
-                                <td class="td-color2">3</td>
-                              </tr>
-                              <tr>
-                                <td class="td-color">TIME</td>
-                                <td class="td-color2">00:00</td>
-                              </tr>
-                              <tr>
-                                <td class="td-color">RINGS</td>
-                                <td class="td-color2">0</td>
-                              </tr>
-                    </table>
+
+                <div class="placar">
+                    <div class="container-score">
+                        <img class="img-score" src="./assets/img/score.png" alt="score">
+                        <span class="score"></span>
+                    </div>
                 </div>
 
             </div>
 	
  
             <audio src="./assets/sounds/song_sonic.mp3" preload="auto" id="musica"></audio>
-            <audio src="./assets/sounds/Sonic_Jump.mp3" preload="auto" id="jump"></audio>
-            <audio src="./assets/sounds/Sonic_damage.mp3" preload="auto" id="bateu"></audio>
-            <audio src="" preload="auto" id="Gameover"></audio>
+            <audio src="./assets/sounds/Sonic_Jump.mp3" preload="auto" id="somJump"></audio>
+            <audio src="./assets/sounds/Sonic_Game_Over.mp3" preload="auto" id="gameOver"></audio>
+            <audio src="./assets/sounds/Sonic_opening_theme.mp3" preload="auto" id="opening_theme"></audio>
 
         </section>
 
