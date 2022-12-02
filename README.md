@@ -39,9 +39,16 @@ https://sonic-race.netlify.app/
 
 
 ## Imagens do jogo
-![readme2](https://user-images.githubusercontent.com/101136752/205196961-c2f80f01-3d3f-4a58-8ebe-b325f2400bfc.png)
+
+***JUMP***
+
+![readme2](https://user-images.githubusercontent.com/101136752/205336464-5f84f5b8-a4a9-401b-a2f5-645fc0209046.png)
+
+***GAME OVER***
 
 ![readme3](https://user-images.githubusercontent.com/101136752/205196967-ae1c4d91-b569-44dd-b3d0-dc995b640d7e.png)
+
+***LOWER***
 
 ![readme4](https://user-images.githubusercontent.com/101136752/205196979-eae4c75f-b885-457e-bafe-6a5dd3ec3a47.png)
 
