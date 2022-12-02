@@ -14,23 +14,27 @@
 * [Tecnologias usadas](#Tecnologias-usadas)
 * [Imagens do jogo](#Imagens-do-jogo)
 * [Para jogar](#Para-jogar)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
+* [Pessoas contribuidoras](#Pessoas-contribuidoras)
+* [Pessoas Desenvolvedoras do Projeto](#Pessoas-desenvolvedoras)
 * [Versão](#Versão)
 
 ## Pessoas Desenvolvedoras do Projeto
 
 <p>Tassio Stavale (https://github.com/TStavale)</p>
+
 <p>Ana Caroline Vasconcellos (https://github.com/JovemDevv)</p>
 
 ## Para jogar
 
 https://jovemdevv.github.io/sonic/
 
+
 ## Pessoas contribuidoras
 
-[[Contribute](CONTRIBUTING.md)]. <a href="https://github.com/TStavale/Game_of_sonic/graphs/contributors"><img src="" /></a>
+![Contribuintes](https://user-images.githubusercontent.com/101136752/205203882-3b37c1f6-1b0b-4290-9836-1541828dcfdb.png)
 
 ## Descrição do Projeto
+
 
 
 
