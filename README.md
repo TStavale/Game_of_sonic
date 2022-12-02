@@ -26,4 +26,4 @@ Criação do HTML: fazendo um container para o jogo.</ul>
 
 ![readme4](https://user-images.githubusercontent.com/101136752/205190270-9aa2cb07-a4b5-42b5-8441-5fa7af48c75e.png)
 
-**<Projeto está na versao 1.0>**
+**<Projeto está na versão 1.0>**
