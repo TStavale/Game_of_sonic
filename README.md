@@ -1,3 +1,7 @@
+![license-MIT-informational](https://user-images.githubusercontent.com/101136752/205198344-c8e0f416-5ccc-423d-9429-df7be2c92928.svg)
+![JavaScript-JQuery-yellow](https://img.shields.io/badge/JavaScript-JQuery-yellow)
+![Version-1.0-blue](https://img.shields.io/badge/Version-1.0-blue)
+
 # Sonic Race
 ![readme1](https://user-images.githubusercontent.com/101136752/205196731-db3a7f40-b4a2-490b-bda9-0815c4b47c1e.png)
 <p>Um jogo desenvolvido para ser jogado diretamente do navegador web.</p>
