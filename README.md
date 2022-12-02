@@ -19,8 +19,8 @@
 
 ## Pessoas Desenvolvedoras do Projeto
 
-<p>Tassio Stavale(https://github.com/TStavale)</p>
-<p>Ana Caroline Vasconcellos(https://github.com/JovemDevv)</p>
+<p>Tassio Stavale (https://github.com/TStavale)</p>
+<p>Ana Caroline Vasconcellos (https://github.com/JovemDevv)</p>
 
 ## Para jogar
 
