@@ -35,6 +35,7 @@ https://jovemdevv.github.io/sonic/
 
 ## Descrição do Projeto
 
+<p>Projeto feito em parceria, baseado no nostálgico e maravilhoso jogo Sonic Hedgehog, feito em 2D. O mesmo foi desenvolvido com o intuito de aprimorar nossas habilidades em html, css e javadcript.<br> O jogo conta com inimigos que alternam sua presença na tela e o personagem Sonic para se esquivar, utiliza movimentos como saltar e se abaixar. O jogo conta ainda com um background dinâmico e com um score que após o fim do jogo informa sua pontuação através de um alert.</p>
 
 
 
