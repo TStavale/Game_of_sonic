@@ -8,7 +8,7 @@
 * [Índice](#índice)
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Tecnologias usadas](#Tecnologias-usadas)
-* [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
+* [Imagens do jogo](#Imagens-do-jogo)
 * [Para jogar](#Para-jogar)
 * [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
 * [Versão](#Versão-do-projeto)
@@ -32,7 +32,7 @@ https://jovemdevv.github.io/sonic/
 <ul>CSS</ul>
 <ul>JavaScript(JQuery)</ul>
 
-## Imagens
+## Imagens do jogo
 ![readme2](https://user-images.githubusercontent.com/101136752/205196961-c2f80f01-3d3f-4a58-8ebe-b325f2400bfc.png)
 
 ![readme3](https://user-images.githubusercontent.com/101136752/205196967-ae1c4d91-b569-44dd-b3d0-dc995b640d7e.png)
