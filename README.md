@@ -14,9 +14,9 @@ Para ver o jogo rodando: https://jovemdevv.github.io/sonic/
 
 ## Tópicos:
 <ul>
-Criação do HTML: fazendo um container para o jogo.</ul>
-<ul>Colocando o estilo e interação na página com CSS: ja aqui introduzimos o estilo da pagina e algumas movimentações do game como pulo, movimentação do fundo e movimentação dos androids.</ul>
-<ul>Colocando a interação da pagina com JavaScript e utilizando a biblioteca Jquery para dar o 'start' no jogo: aqui é que começaremos a interação do jogo. no JS tera funções para colisão do sonic com os androids, colocando os bichos aleatóriamente, 'score' do jogo, junto ao CSS fazedo com que o sonic pule, e o Game Over.</ul>
+<b>Criação do HTML:</b> fazendo um container para o jogo.</ul>
+<ul><b>Colocando o estilo e interação na página com CSS:</b> já aqui, introduzimos o estilo da pagina e algumas movimentações do game como pulo, movimentação do fundo e movimentação dos androids.</ul>
+<ul><b>Colocando a interação da pagina com JavaScript e utilizando a biblioteca Jquery para dar o 'start' no jogo:</b> aqui é que começaremos a interação do jogo. no JS tera funções para colisão do sonic com os androids, colocando os bichos aleatóriamente, 'score' do jogo, junto ao CSS fazedo com que o sonic pule, e o Game Over.</ul>
 
 ![readme1](https://user-images.githubusercontent.com/101136752/205190184-ced8bb6f-cbe3-4b4d-8613-c0a7fca16622.png)
 
