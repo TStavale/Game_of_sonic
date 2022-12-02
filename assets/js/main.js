@@ -11,8 +11,7 @@ function start() { // Inicio da função start()
 
     $("#inicio").hide();    
 
-    
-    fimdejogo = false;
+	
     let jogo = {};
 
 
