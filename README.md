@@ -4,14 +4,14 @@
 
 
 # Índice
-* [Game of Sonic](#Título-e-Imagem-de-capa)
+* [Sonic Race](#Sonic-Race)
 * [Índice](#índice)
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Tecnologias usadas](#Tecnologias-usadas)
 * [Imagens do jogo](#Imagens-do-jogo)
 * [Para jogar](#Para-jogar)
 * [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
-* [Versão](#Versão-do-projeto)
+* [Versão](#Versão)
 
 ## Pessoas Desenvolvedoras do Projeto
 
