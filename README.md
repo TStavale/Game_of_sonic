@@ -26,15 +26,19 @@
 
 https://jovemdevv.github.io/sonic/
 
+## Pessoas contribuidoras
+
+[[Contribute](CONTRIBUTING.md)]. <a href="https://github.com/facebook/docusaurus/graphs/contributors"><img src="https://opencollective.com/Docusaurus/contributors.svg?width=890&button=false" /></a>
+
 ## Descrição do Projeto
 
 
 
 ## Tecnologias usadas
 
-<ul>HTML</ul>
-<ul>CSS</ul>
-<ul>JavaScript(JQuery)</ul>
+- ``HTML``
+- ``CSS``
+- ``JavaScript(JQuery)``
 
 ## Imagens do jogo
 ![readme2](https://user-images.githubusercontent.com/101136752/205196961-c2f80f01-3d3f-4a58-8ebe-b325f2400bfc.png)
